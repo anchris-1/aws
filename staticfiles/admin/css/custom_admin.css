@@ -1,0 +1,199 @@
+/* Custom Admin Panel Styling with Background Images */
+:root {
+    --primary-color: #3B82F6;
+    --secondary-color: #8B5CF6;
+    --accent-color: #EC4899;
+}
+
+/* Admin Header with Gradient */
+#header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    color: white !important;
+    border-bottom: none !important;
+}
+
+#branding h1 {
+    color: white !important;
+    font-weight: bold !important;
+    font-size: 1.5rem !important;
+}
+
+/* Sidebar Styling */
+#content-related {
+    background: linear-gradient(180deg, #f8fafc, #e2e8f0) !important;
+    border-left: 1px solid #e2e8f0 !important;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    color: white !important;
+    border: none !important;
+}
+
+/* Button Styling */
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: var(--primary-color) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 10px 20px !important;
+    transition: all 0.3s ease !important;
+}
+
+.button:hover, input[type=submit]:hover, input[type=button]:hover, .submit-row input:hover, a.button:hover {
+    background: var(--secondary-color) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Form Styling */
+input[type=text], input[type=password], input[type=email], input[type=url],
+input[type=number], textarea, select, .vTextField {
+    border: 2px solid #e2e8f0 !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+    transition: all 0.3s ease !important;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus,
+input[type=url]:focus, input[type=number]:focus, textarea:focus, select:focus,
+.vTextField:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+    outline: none !important;
+}
+
+/* Table Styling */
+#changelist table thead th {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    color: white !important;
+    border: none !important;
+}
+
+#changelist table tbody tr:hover {
+    background-color: #f0f9ff !important;
+    transition: background-color 0.3s ease !important;
+}
+
+/* Image Preview Styling */
+.image-preview {
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+.image-preview:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Animation for admin elements */
+@keyframes slideInAdmin {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.module {
+    animation: slideInAdmin 0.5s ease-out !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Dashboard Styling */
+.dashboard .module {
+    background: white !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+/* Login Page Styling */
+.login .form-row {
+    animation: slideInAdmin 0.6s ease-out !important;
+}
+
+.login .submit-row {
+    animation: slideInAdmin 0.8s ease-out !important;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    #content {
+        padding: 15px !important;
+    }
+    
+    .module {
+        margin-bottom: 20px !important;
+    }
+    
+    #changelist .actions {
+        margin-bottom: 15px !important;
+    }
+}
+
+/* Loading animation for admin */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom background for admin if set */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    min-height: 100vh !important;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: -1;
+}
+
+/* Breadcrumb Styling */
+.breadcrumbs {
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0) !important;
+    border: none !important;
+    border-radius: 6px !important;
+    margin-bottom: 20px !important;
+}
+
+/* Pagination Styling */
+.paginator {
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0) !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 10px !important;
+}
+
+.paginator a:link, .paginator a:visited {
+    background: var(--primary-color) !important;
+    color: white !important;
+    border-radius: 4px !important;
+    padding: 5px 10px !important;
+    margin: 0 2px !important;
+}
+
+.paginator a:hover {
+    background: var(--secondary-color) !important;
+    transform: translateY(-1px) !important;
+}

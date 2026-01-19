@@ -1,0 +1,318 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us - {{ site_settings.site_name }}{% endblock %}
+
+{% block content %}
+<!-- About Header -->
+<section class="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden">
+    <!-- Background Elements -->
+    <div class="absolute top-10 right-10 w-20 h-20 bg-blue-200/30 rounded-full"></div>
+    <div class="absolute bottom-10 left-10 w-32 h-32 bg-purple-200/30 rounded-full"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div data-aos="fade-up">
+            <span class="text-blue-600 font-semibold text-lg uppercase tracking-wider">About Us</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6 mt-4">
+                Crafting <span class="gradient-text">Digital Excellence</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                We are a passionate team of developers, designers, and innovators dedicated to creating 
+                exceptional digital experiences that drive business growth and user engagement.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Our Story -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <span class="text-blue-600 font-semibold text-lg uppercase tracking-wider">Our Story</span>
+                <h2 class="text-4xl font-bold text-gray-800 mb-6 mt-2">From Vision to Reality</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Founded with a vision to transform the digital landscape, we've been at the forefront 
+                    of web development innovation for over 3 years. Our journey began with a simple belief: 
+                    that technology should empower businesses and create meaningful connections.
+                </p>
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    Today, we're proud to have delivered <strong class="text-blue-600">50+ successful projects</strong> 
+                    for clients across various industries. Our commitment to quality, innovation, and client 
+                    satisfaction has made us a trusted partner for businesses looking to thrive in the digital world.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                        <span class="text-gray-700 font-semibold">50+ Projects Delivered</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                        <span class="text-gray-700 font-semibold">3+ Years Experience</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                        <span class="text-gray-700 font-semibold">98% Client Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-left" class="relative">
+                <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2">{{ total_projects }}+</div>
+                            <div class="text-blue-100">Projects Completed</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2">{{ total_clients }}+</div>
+                            <div class="text-blue-100">Happy Clients</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2">{{ total_services }}+</div>
+                            <div class="text-blue-100">Services Offered</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2">24/7</div>
+                            <div class="text-blue-100">Support Available</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Floating elements -->
+                <div class="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full"></div>
+                <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Values -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="text-blue-600 font-semibold text-lg uppercase tracking-wider">Our Values</span>
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">What Drives Us</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our core values shape everything we do, from the way we approach projects to how we interact with clients.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div data-aos="fade-up" data-aos-delay="100" class="text-center group">
+                <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 transition-colors duration-300">
+                    <i class="fas fa-bullseye text-blue-600 text-2xl group-hover:text-white transition-colors duration-300"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
+                <p class="text-gray-600">We strive for perfection in every project, delivering solutions that exceed expectations.</p>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="200" class="text-center group">
+                <div class="w-20 h-20 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-green-600 transition-colors duration-300">
+                    <i class="fas fa-lightbulb text-green-600 text-2xl group-hover:text-white transition-colors duration-300"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Innovation</h3>
+                <p class="text-gray-600">We embrace new technologies and creative approaches to solve complex challenges.</p>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="300" class="text-center group">
+                <div class="w-20 h-20 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-600 transition-colors duration-300">
+                    <i class="fas fa-handshake text-purple-600 text-2xl group-hover:text-white transition-colors duration-300"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Partnership</h3>
+                <p class="text-gray-600">We build long-term relationships based on trust, transparency, and mutual success.</p>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="400" class="text-center group">
+                <div class="w-20 h-20 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-orange-600 transition-colors duration-300">
+                    <i class="fas fa-rocket text-orange-600 text-2xl group-hover:text-white transition-colors duration-300"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Growth</h3>
+                <p class="text-gray-600">We're committed to continuous learning and helping our clients grow their businesses.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technology Expertise -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="text-blue-600 font-semibold text-lg uppercase tracking-wider">Technology Stack</span>
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">Our Technical Expertise</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                We master a diverse set of technologies to build robust, scalable, and high-performance solutions.
+            </p>
+        </div>
+
+        <div class="space-y-12">
+            <!-- Frontend Technologies -->
+            <div data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center">
+                    <i class="fas fa-palette text-blue-600 mr-3"></i>
+                    Frontend Development
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    {% for tech in frontend_tech %}
+                    <div class="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all duration-300">
+                        <div class="text-2xl mb-2 text-blue-600">
+                            <i class="{{ tech.icon }}"></i>
+                        </div>
+                        <span class="text-sm font-semibold text-gray-800">{{ tech.name }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <!-- Backend Technologies -->
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center">
+                    <i class="fas fa-server text-green-600 mr-3"></i>
+                    Backend Development
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    {% for tech in backend_tech %}
+                    <div class="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all duration-300">
+                        <div class="text-2xl mb-2 text-green-600">
+                            <i class="{{ tech.icon }}"></i>
+                        </div>
+                        <span class="text-sm font-semibold text-gray-800">{{ tech.name }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <!-- Database & Mobile -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center">
+                        <i class="fas fa-database text-purple-600 mr-3"></i>
+                        Database & Tools
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        {% for tech in database_tech %}
+                        <div class="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all duration-300">
+                            <div class="text-2xl mb-2 text-purple-600">
+                                <i class="{{ tech.icon }}"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-gray-800">{{ tech.name }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center">
+                        <i class="fas fa-mobile-alt text-orange-600 mr-3"></i>
+                        Mobile & Cloud
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        {% for tech in mobile_tech %}
+                        <div class="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all duration-300">
+                            <div class="text-2xl mb-2 text-orange-600">
+                                <i class="{{ tech.icon }}"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-gray-800">{{ tech.name }}</span>
+                        </div>
+                        {% endfor %}
+                        {% for tech in cloud_tech %}
+                        <div class="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all duration-300">
+                            <div class="text-2xl mb-2 text-orange-600">
+                                <i class="{{ tech.icon }}"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-gray-800">{{ tech.name }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="text-blue-600 font-semibold text-lg uppercase tracking-wider">Why Choose Us</span>
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">The Perfect Development Partner</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div data-aos="fade-up" data-aos-delay="100" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-users text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Expert Team</h3>
+                <p class="text-gray-600">Our team consists of seasoned professionals with diverse expertise in modern technologies.</p>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="200" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Quality Assurance</h3>
+                <p class="text-gray-600">Rigorous testing and quality checks ensure bug-free, high-performance applications.</p>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="300" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-clock text-purple-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Timely Delivery</h3>
+                <p class="text-gray-600">We respect deadlines and deliver projects on time without compromising quality.</p>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="400" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-headset text-orange-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">24/7 Support</h3>
+                <p class="text-gray-600">Round-the-clock support ensures your applications run smoothly at all times.</p>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="500" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-lock text-red-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Security First</h3>
+                <p class="text-gray-600">We implement robust security measures to protect your data and applications.</p>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="600" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="w-14 h-14 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-sync-alt text-indigo-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Continuous Improvement</h3>
+                <p class="text-gray-600">We stay updated with the latest technologies and industry best practices.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white relative overflow-hidden">
+    <!-- Background Elements -->
+    <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-80 h-80 bg-white/5 rounded-full translate-x-1/2 translate-y-1/2"></div>
+    
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Work With Us?</h2>
+            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                Let's discuss your project requirements and start building something amazing together. 
+                We're excited to learn about your vision and help bring it to life.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="{% url 'contact' %}" 
+                   class="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover-lift inline-flex items-center justify-center">
+                    <i class="fas fa-paper-plane mr-3"></i>
+                    Start Your Project
+                </a>
+                <a href="{% url 'projects' %}" 
+                   class="glass-effect text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/20 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center">
+                    <i class="fas fa-briefcase mr-3"></i>
+                    View Our Work
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

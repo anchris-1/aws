@@ -1,0 +1,699 @@
+{% extends 'base.html' %}
+
+{% block title %}Our Portfolio & Projects - {{ site_settings.site_name }}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-900 dark:to-blue-900/20">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-80 h-80 bg-purple-300/20 dark:bg-purple-500/10 rounded-full animate-pulse"></div>
+        <div class="absolute top-1/3 -left-20 w-60 h-60 bg-blue-300/20 dark:bg-blue-500/10 rounded-full animate-pulse animation-delay-1000"></div>
+        <div class="absolute bottom-20 right-1/4 w-40 h-40 bg-indigo-300/20 dark:bg-indigo-500/10 rounded-full animate-pulse animation-delay-2000"></div>
+    </div>
+
+    <!-- Grid Pattern -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 py-20">
+        <div data-aos="fade-down" data-aos-duration="800">
+            <span class="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-600 dark:text-blue-300 font-medium text-sm tracking-wider mb-6 animate-fade-in">
+                <span class="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full mr-2 animate-pulse"></span>
+                OUR SHOWCASE
+            </span>
+            
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 dark:from-blue-400 dark:via-purple-400 dark:to-indigo-400 animate-gradient">
+                    Masterpiece
+                </span>
+                <br>
+                <span class="text-gray-800 dark:text-white">Portfolio</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
+                Where innovation meets execution. Discover our curated collection of digital excellence, 
+                crafted with precision and passion.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center animate-fade-up">
+                <a href="#projects" class="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 text-white rounded-xl font-semibold text-lg transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 transform hover:-translate-y-1 hover:scale-105">
+                    <span class="relative z-10 flex items-center justify-center">
+                        Explore Projects
+                        <svg class="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </span>
+                    <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                
+                <a href="{% url 'contact' %}" class="group px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-xl font-semibold text-lg transition-all duration-300 hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transform hover:-translate-y-1">
+                    <span class="flex items-center justify-center">
+                        <svg class="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                        </svg>
+                        Start Project
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div class="w-6 h-10 border-2 border-gray-400 dark:border-gray-500 rounded-full flex justify-center">
+            <div class="w-1 h-3 bg-gray-400 dark:bg-gray-500 rounded-full mt-2"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-16 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <!-- Stats hardcoded to avoid template tag issues -->
+            <div data-aos="fade-up" data-aos-delay="100" 
+                 class="group text-center p-6 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+                <div class="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900/30 dark:to-blue-800/30 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-rocket text-2xl text-blue-600 dark:text-blue-400"></i>
+                </div>
+                <div class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-2 group-hover:scale-105 transition-transform duration-300">
+                    {{ projects|length }}+
+                </div>
+                <div class="text-gray-600 dark:text-gray-300 font-medium">
+                    Projects Delivered
+                </div>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="200" 
+                 class="group text-center p-6 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-500 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+                <div class="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-xl bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900/30 dark:to-green-800/30 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-heart text-2xl text-green-600 dark:text-green-400"></i>
+                </div>
+                <div class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-2 group-hover:scale-105 transition-transform duration-300">
+                    98%
+                </div>
+                <div class="text-gray-600 dark:text-gray-300 font-medium">
+                    Client Satisfaction
+                </div>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="300" 
+                 class="group text-center p-6 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-500 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+                <div class="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-xl bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900/30 dark:to-purple-800/30 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-clock text-2xl text-purple-600 dark:text-purple-400"></i>
+                </div>
+                <div class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-2 group-hover:scale-105 transition-transform duration-300">
+                    100%
+                </div>
+                <div class="text-gray-600 dark:text-gray-300 font-medium">
+                    On-Time Delivery
+                </div>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="400" 
+                 class="group text-center p-6 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-indigo-300 dark:hover:border-indigo-500 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+                <div class="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-xl bg-gradient-to-br from-indigo-100 to-indigo-200 dark:from-indigo-900/30 dark:to-indigo-800/30 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-shield text-2xl text-indigo-600 dark:text-indigo-400"></i>
+                </div>
+                <div class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-2 group-hover:scale-105 transition-transform duration-300">
+                    24/7
+                </div>
+                <div class="text-gray-600 dark:text-gray-300 font-medium">
+                    Support
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Grid -->
+<section id="projects" class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                Featured <span class="relative">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+                        Creations
+                    </span>
+                    <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></span>
+                </span>
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Each project tells a unique story of collaboration, innovation, and technical excellence
+            </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12" data-aos="fade-up">
+            <button class="filter-btn active px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-0.5">
+                All Projects
+            </button>
+            {% for service in services %}
+            <button class="filter-btn px-6 py-3 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-xl font-semibold transition-all duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 transform hover:-translate-y-0.5">
+                {{ service.name }}
+            </button>
+            {% endfor %}
+        </div>
+
+        <!-- Projects -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for project in projects %}
+            <div data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:1 }}00"
+                 class="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 hover:-translate-y-4">
+                <!-- Project Image -->
+                {% if project.image %}
+                <div class="relative h-56 overflow-hidden">
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <!-- Featured Badge -->
+                    {% if project.is_featured %}
+                    <div class="absolute top-4 right-4 animate-pulse">
+                        <span class="px-4 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-full text-sm font-semibold shadow-lg flex items-center">
+                            <i class="fas fa-star mr-2"></i>Featured
+                        </span>
+                    </div>
+                    {% endif %}
+                    
+                    <!-- Overlay Content -->
+                    <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="flex gap-4">
+                            {% if project.project_url %}
+                            <a href="{{ project.project_url }}" target="_blank"
+                               class="flex-1 bg-white text-gray-900 py-2 rounded-lg text-center font-semibold hover:bg-gray-100 transition-colors duration-300">
+                                Live Demo
+                            </a>
+                            {% endif %}
+                            <a href="{% url 'project_detail' project.id %}"
+                               class="flex-1 bg-blue-600 text-white py-2 rounded-lg text-center font-semibold hover:bg-blue-700 transition-colors duration-300">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                
+                <!-- Project Content -->
+                <div class="p-6">
+                    <!-- Title & Description -->
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                        {{ project.title }}
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 line-clamp-2 leading-relaxed">
+                        {{ project.description|truncatewords:25 }}
+                    </p>
+                    
+                    <!-- Meta Info -->
+                    <div class="space-y-4 mb-6">
+                        {% if project.client_name %}
+                        <div class="flex items-center text-gray-500 dark:text-gray-400">
+                            <div class="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3">
+                                <i class="fas fa-user text-blue-600 dark:text-blue-400"></i>
+                            </div>
+                            <span class="font-medium">{{ project.client_name }}</span>
+                        </div>
+                        {% endif %}
+                        
+                        {% if project.completion_date %}
+                        <div class="flex items-center text-gray-500 dark:text-gray-400">
+                            <div class="w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mr-3">
+                                <i class="fas fa-calendar text-purple-600 dark:text-purple-400"></i>
+                            </div>
+                            <span class="font-medium">{{ project.completion_date|date:"F Y" }}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Services Tags -->
+                    {% if project.services.exists %}
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        {% for service in project.services.all %}
+                        <span class="px-3 py-1.5 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 text-blue-700 dark:text-blue-300 rounded-lg text-sm font-medium border border-blue-200 dark:border-blue-700">
+                            {{ service.name }}
+                        </span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex items-center justify-between pt-6 border-t border-gray-200 dark:border-gray-700">
+                        <a href="{% url 'project_detail' project.id %}" 
+                           class="text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-300 group/link">
+                            <span class="flex items-center">
+                                Case Study
+                                <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
+                            </span>
+                        </a>
+                        
+                        <div class="flex items-center gap-4">
+                            {% if project.project_url %}
+                            <a href="{{ project.project_url }}" target="_blank"
+                               class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110"
+                               title="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            {% endif %}
+                            
+                            {% if project.github_url %}
+                            <a href="{{ project.github_url }}" target="_blank"
+                               class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-800 dark:hover:bg-gray-600 hover:text-white transition-all duration-300 hover:scale-110"
+                               title="Source Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hover Border Effect -->
+                <div class="absolute inset-0 border-2 border-transparent group-hover:border-blue-500 dark:group-hover:border-blue-400 rounded-2xl transition-all duration-500 pointer-events-none"></div>
+            </div>
+            {% empty %}
+            <!-- Empty State -->
+            <div class="col-span-full text-center py-24" data-aos="fade-up">
+                <div class="max-w-md mx-auto">
+                    <div class="relative w-32 h-32 mx-auto mb-8">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 rounded-full animate-pulse"></div>
+                        <div class="relative z-10 w-full h-full flex items-center justify-center">
+                            <i class="fas fa-briefcase text-6xl text-gray-400 dark:text-gray-600"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-700 dark:text-gray-300 mb-4">Portfolio in Progress</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-lg mb-8">
+                        We're crafting exceptional projects that will be showcased here soon. Great things take time!
+                    </p>
+                    <a href="{% url 'contact' %}" 
+                       class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-lg hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+                        <i class="fas fa-lightbulb mr-3"></i>
+                        Be Our First Case Study
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Process Timeline -->
+<section class="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                Our <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-600 dark:from-green-400 dark:to-emerald-400">
+                    Process
+                </span>
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                A systematic approach to delivering exceptional results
+            </p>
+        </div>
+
+        <div class="relative">
+            <!-- Timeline Line -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 hidden md:block"></div>
+
+            <!-- Timeline Items - Hardcoded to avoid template tag issues -->
+            <div data-aos="fade-left" data-aos-delay="100"
+                 class="relative mb-12 md:mb-16 md:text-left">
+                <div class="md:w-1/2 md:pr-12">
+                    <div class="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500">
+                        <!-- Step Indicator -->
+                        <div class="absolute top-1/2 transform -translate-y-1/2 md:-right-6 hidden md:flex">
+                            <div class="relative w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">
+                                01
+                                <div class="absolute -inset-1 rounded-full bg-blue-500/20 group-hover:bg-blue-500/30 transition-colors duration-300"></div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex items-start mb-6">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900/30 dark:to-blue-800/30 flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-300">
+                                <i class="fas fa-search text-2xl text-blue-600 dark:text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Discovery</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Understanding your vision and requirements</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Progress Line -->
+                        <div class="h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000" style="transition-delay: 000ms"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-right" data-aos-delay="200"
+                 class="relative mb-12 md:mb-16 md:text-right">
+                <div class="md:w-1/2 md:ml-auto md:pl-12">
+                    <div class="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-500">
+                        <!-- Step Indicator -->
+                        <div class="absolute top-1/2 transform -translate-y-1/2 md:-left-6 hidden md:flex">
+                            <div class="relative w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">
+                                02
+                                <div class="absolute -inset-1 rounded-full bg-purple-500/20 group-hover:bg-purple-500/30 transition-colors duration-300"></div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex items-start mb-6">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900/30 dark:to-purple-800/30 flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-300">
+                                <i class="fas fa-chart-line text-2xl text-purple-600 dark:text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Planning</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Strategic roadmap and architecture design</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Progress Line -->
+                        <div class="h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000" style="transition-delay: 100ms"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-left" data-aos-delay="300"
+                 class="relative mb-12 md:mb-16 md:text-left">
+                <div class="md:w-1/2 md:pr-12">
+                    <div class="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-200 dark:border-gray-700 hover:border-indigo-300 dark:hover:border-indigo-500">
+                        <!-- Step Indicator -->
+                        <div class="absolute top-1/2 transform -translate-y-1/2 md:-right-6 hidden md:flex">
+                            <div class="relative w-12 h-12 rounded-full bg-gradient-to-r from-indigo-500 to-indigo-600 flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">
+                                03
+                                <div class="absolute -inset-1 rounded-full bg-indigo-500/20 group-hover:bg-indigo-500/30 transition-colors duration-300"></div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex items-start mb-6">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-100 to-indigo-200 dark:from-indigo-900/30 dark:to-indigo-800/30 flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-300">
+                                <i class="fas fa-code text-2xl text-indigo-600 dark:text-indigo-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Development</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Agile implementation with modern technologies</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Progress Line -->
+                        <div class="h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000" style="transition-delay: 200ms"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-right" data-aos-delay="400"
+                 class="relative mb-12 md:mb-16 md:text-right">
+                <div class="md:w-1/2 md:ml-auto md:pl-12">
+                    <div class="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-500">
+                        <!-- Step Indicator -->
+                        <div class="absolute top-1/2 transform -translate-y-1/2 md:-left-6 hidden md:flex">
+                            <div class="relative w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-green-600 flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">
+                                04
+                                <div class="absolute -inset-1 rounded-full bg-green-500/20 group-hover:bg-green-500/30 transition-colors duration-300"></div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex items-start mb-6">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900/30 dark:to-green-800/30 flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-300">
+                                <i class="fas fa-check-double text-2xl text-green-600 dark:text-green-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Testing</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Quality assurance and performance optimization</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Progress Line -->
+                        <div class="h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-green-500 to-green-600 rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000" style="transition-delay: 300ms"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-left" data-aos-delay="500"
+                 class="relative mb-12 md:mb-16 md:text-left">
+                <div class="md:w-1/2 md:pr-12">
+                    <div class="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-200 dark:border-gray-700 hover:border-pink-300 dark:hover:border-pink-500">
+                        <!-- Step Indicator -->
+                        <div class="absolute top-1/2 transform -translate-y-1/2 md:-right-6 hidden md:flex">
+                            <div class="relative w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">
+                                05
+                                <div class="absolute -inset-1 rounded-full bg-pink-500/20 group-hover:bg-pink-500/30 transition-colors duration-300"></div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex items-start mb-6">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-100 to-pink-200 dark:from-pink-900/30 dark:to-pink-800/30 flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-300">
+                                <i class="fas fa-rocket text-2xl text-pink-600 dark:text-pink-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Launch</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Deployment and monitoring</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Progress Line -->
+                        <div class="h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-pink-500 to-pink-600 rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000" style="transition-delay: 400ms"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-right" data-aos-delay="600"
+                 class="relative mb-12 md:mb-16 md:text-right">
+                <div class="md:w-1/2 md:ml-auto md:pl-12">
+                    <div class="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-200 dark:border-gray-700 hover:border-yellow-300 dark:hover:border-yellow-500">
+                        <!-- Step Indicator -->
+                        <div class="absolute top-1/2 transform -translate-y-1/2 md:-left-6 hidden md:flex">
+                            <div class="relative w-12 h-12 rounded-full bg-gradient-to-r from-yellow-500 to-yellow-600 flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">
+                                06
+                                <div class="absolute -inset-1 rounded-full bg-yellow-500/20 group-hover:bg-yellow-500/30 transition-colors duration-300"></div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex items-start mb-6">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-yellow-100 to-yellow-200 dark:from-yellow-900/30 dark:to-yellow-800/30 flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-300">
+                                <i class="fas fa-headset text-2xl text-yellow-600 dark:text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Support</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Ongoing maintenance and updates</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Progress Line -->
+                        <div class="h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000" style="transition-delay: 500ms"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-24 relative overflow-hidden">
+    <!-- Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 dark:from-blue-500/5 dark:via-purple-500/5 dark:to-pink-500/5"></div>
+    
+    <!-- Animated Orbs -->
+    <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full animate-float"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full animate-float animation-delay-2000"></div>
+    
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div data-aos="zoom-in" data-aos-duration="800" class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-200 dark:border-gray-700">
+            <div class="text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                    Ready to Create
+                    <span class="block bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+                        Something Amazing?
+                    </span>
+                </h2>
+                
+                <p class="text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
+                    Let's transform your vision into reality. Share your project details, and we'll craft a solution that exceeds expectations.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="{% url 'contact' %}"
+                       class="group relative px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-500 transform hover:-translate-y-1 hover:scale-105">
+                        <span class="relative z-10 flex items-center justify-center">
+                            <svg class="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                            </svg>
+                            Start Your Journey
+                        </span>
+                        <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    
+                    <a href="{% url 'services' %}"
+                       class="group px-10 py-5 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-xl font-semibold text-lg border-2 border-gray-300 dark:border-gray-600 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 transform hover:-translate-y-1">
+                        <span class="flex items-center justify-center">
+                            Explore Services
+                            <svg class="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                
+                <!-- Trust Badges -->
+                <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+                    <div class="flex flex-wrap items-center justify-center gap-8 text-gray-500 dark:text-gray-400">
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt text-green-500 text-xl mr-2"></i>
+                            <span class="font-medium">Secure Development</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-blue-500 text-xl mr-2"></i>
+                            <span class="font-medium">24/7 Support</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-award text-yellow-500 text-xl mr-2"></i>
+                            <span class="font-medium">Quality Guaranteed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animation-delay-1000 {
+    animation-delay: 1s;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+}
+
+.backdrop-blur-xl {
+    backdrop-filter: blur(20px);
+}
+
+.filter-btn.active {
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+.group:hover .group-hover\:translate-x-2 {
+    transform: translateX(0.5rem);
+}
+
+@media (max-width: 768px) {
+    .md\:text-left, .md\:text-right {
+        text-align: center;
+    }
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('[data-aos="fade-up"]');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove('active', 'bg-gradient-to-r', 'from-blue-600', 'to-purple-600', 'text-white'));
+            filterBtns.forEach(b => b.classList.add('bg-gray-100', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300'));
+            
+            this.classList.remove('bg-gray-100', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300');
+            this.classList.add('active', 'bg-gradient-to-r', 'from-blue-600', 'to-purple-600', 'text-white');
+            
+            // Filter logic would go here
+            const filterValue = this.textContent.trim();
+            console.log('Filter by:', filterValue);
+        });
+    });
+    
+    // Add scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in-view');
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all project cards
+    projectCards.forEach(card => {
+        observer.observe(card);
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+</script>
+{% endblock %}
